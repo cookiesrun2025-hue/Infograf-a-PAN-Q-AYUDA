@@ -334,17 +334,20 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // 👉 Enlace público al PDF (GitHub Pages)
- const PDF_URL = '/Infograf-a-PAN-Q-AYUDA/assets/assets/PAN_QAYUDA.pdf';
+ // Usa rutas relativas: funcionan en GitHub Pages y local
+// En tu repositorio actual, las imágenes están dentro de assets/assets/
+const PDF_URL = 'assets/assets/PAN_QAYUDA.pdf';
 const IMAGES = {
-  hero: '/Infograf-a-PAN-Q-AYUDA/assets/assets/Gi-Health.png',
-  layoutActual: '/Infograf-a-PAN-Q-AYUDA/assets/assets/layout_actual.png',
-  layoutPropuesto: '/Infograf-a-PAN-Q-AYUDA/assets/assets/layout_propuesto.png',
-  procesoActual: '/Infograf-a-PAN-Q-AYUDA/assets/assets/proceso_actual.png',
-  procesoPropuesto: '/Infograf-a-PAN-Q-AYUDA/assets/assets/proceso_propuesto.png',
-  flujo: '/Infograf-a-PAN-Q-AYUDA/assets/assets/flujo.png',
-  resultados: '/Infograf-a-PAN-Q-AYUDA/assets/assets/resultados.png',
-  kpis: '/Infograf-a-PAN-Q-AYUDA/assets/assets/kpis.png'
+  hero: 'assets/assets/Gi-Health.png',
+  layoutActual: 'assets/assets/layout_actual.png',
+  layoutPropuesto: 'assets/assets/layout_propuesto.png',
+  procesoActual: 'assets/assets/proceso_actual.png',
+  procesoPropuesto: 'assets/assets/proceso_propuesto.png',
+  flujo: 'assets/assets/flujo.png',
+  resultados: 'assets/assets/resultados.png',
+  kpis: 'assets/assets/kpis.png'
 };
+
 
 
 
