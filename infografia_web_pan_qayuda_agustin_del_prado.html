@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PAN Q'AYUDA — Infografía | Agustín Del Prado</title>
+  <meta name="description" content="Infografía interactiva del proyecto PAN Q'AYUDA — Mejora continua con 5S en cooperativa social. Autor: Agustín Del Prado Carrillo." />
+  <meta property="og:title" content="PAN Q'AYUDA — Infografía" />
+  <meta property="og:description" content="Mejora continua con 5S en cooperativa social. Autor: Agustín Del Prado Carrillo." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#c9a26b" />
+  <style>
+    :root{
+      --bg:#faf6ef;         /* Beige cálido */
+      --paper:#fffaf2;      /* Papel */
+      --ink:#2d2213;        /* Marrón oscuro */
+      --accent:#c9a26b;     /* Dorado pan */
+      --accent-2:#8d6e3f;   /* Caramelo */
+      --muted:#5f5345;      /* Marrón sobrio */
+      --ok:#2aa657;
+      --shadow: 0 10px 30px rgba(141,110,63,.15);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, 'Helvetica Neue', Arial, Noto Sans; color:var(--ink); background:var(--bg)}
+    a{color:var(--accent-2); text-decoration: none}
+    a:hover{opacity:.85}
+    .wrap{max-width:1024px; margin:0 auto; padding:22px}
+
+    /* Header */
+    header.hero{position:relative; overflow:hidden; border-radius: var(--radius); background: linear-gradient(135deg, var(--paper), #fff6e5); box-shadow: var(--shadow); margin:28px 0}
+    .hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:18px; padding:28px}
+    .badge{display:inline-grid; grid-auto-flow:column; align-items:center; gap:10px; padding:6px 12px; border-radius:100px; background: #fff; color:var(--muted); width:max-content; box-shadow:0 6px 20px rgba(0,0,0,.06)}
+    .title{font-size:clamp(28px,5vw,44px); line-height:1.04; margin:8px 0 6px}
+    .subtitle{color:var(--muted); font-weight:500; margin:0 0 14px}
+    .byline{font-weight:600; color:var(--accent-2)}
+    .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; border:1px solid #e6dccb; background:#fff; font-weight:600; box-shadow:0 8px 18px rgba(0,0,0,.06)}
+    .btn.primary{background:var(--accent); color:#fff; border-color:transparent}
+
+    .hero-illo{position:relative; display:grid; place-items:center}
+    .hero-photo{position:relative; width:min(100%,360px); aspect-ratio:4/3; border-radius:18px; overflow:hidden; box-shadow:0 18px 40px rgba(141,110,63,.25); border:6px solid #fff}
+    .hero-photo img{width:100%; height:100%; object-fit:cover; display:block}
+    .hero-photo .placeholder{width:100%; height:100%; background:repeating-linear-gradient(45deg,#f7e8cf 0 14px,#f3ddbe 14px 28px); display:grid; place-items:center; color:#8a6b3e; font-weight:700}
+    .bread{position:absolute; right:-30px; bottom:-30px; width:140px; aspect-ratio:1/1; background: radial-gradient(90% 90% at 50% 30%, #e9c999, #c9a26b 70%, #a6814c 100%); border-radius: 48% 52% 45% 55% / 55% 50% 50% 45%; box-shadow: inset 0 6px 24px rgba(0,0,0,.12), 0 18px 40px rgba(141,110,63,.25)}
+
+    /* Secciones */
+    section{margin:38px 0}
+    h2{font-size: clamp(22px, 3.8vw, 30px); margin:0 0 12px}
+    p.lead{font-size: 18px; color:var(--muted); margin:0 0 12px}
+
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px}
+    .card{grid-column: span 12; background:var(--paper); border:1px solid #efe4d3; border-radius:var(--radius); box-shadow: var(--shadow); padding:18px}
+    @media (min-width:880px){
+      .span-6{grid-column: span 6}
+      .span-4{grid-column: span 4}
+      .span-3{grid-column: span 3}
+    }
+
+    /* Table-like blocks (sobrios) */
+    .t{display:grid; gap:8px}
+    .t h3{margin:0; font-size:18px; color:var(--ink)}
+    .t .row{display:grid; grid-template-columns: 1fr; gap:10px; border:1px solid #ecdcc6; border-radius:14px; padding:12px; background:#fff}
+    .t .row + .row{margin-top:8px}
+    .t .row strong{color:var(--muted); font-weight:700}
+    .t ul{margin:6px 0 0 18px}
+
+    /* Footer */
+    footer{margin:48px 0 22px; text-align:center; color:var(--muted)}
+    .mini{font-size:12px}
+
+    /* Micro interactions */
+    .pop{animation: pop .6s ease both}
+    @keyframes pop{from{transform:translateY(6px); opacity:0} to{transform:translateY(0); opacity:1}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero pop">
+      <div class="hero-inner">
+        <div>
+          <div class="badge" aria-label="Proyecto universitario">Proyecto universitario de mejora continua – UAQ, 2025</div>
+          <h1 class="title">PAN Q'AYUDA</h1>
+          <p class="subtitle">Optimización productiva con enfoque humano mediante la metodología 5S</p>
+          <p class="byline">Autor: <strong>Agustín Del Prado Carrillo</strong></p>
+          <div class="cta-row">
+            <a class="btn primary" id="pdfBtn" href="#" target="_blank" rel="noopener">Ver proyecto completo (PDF)</a>
+            <a class="btn" href="#rol">Mi rol en el proyecto</a>
+          </div>
+        </div>
+        <div class="hero-illo">
+          <figure class="hero-photo">
+            <img id="heroImg" alt="Panadería cooperativa - hero" />
+            <div class="placeholder" id="heroPh">Imagen hero (agrega URL)</div>
+            <div class="bread" aria-hidden="true"></div>
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO IMAGE from project -->
+    <section class="pop" id="hero-visual">
+      <div class="grid">
+        <figure class="card" style="text-align:center">
+          <img id="imgHeroProject" alt="Producto Gi-Health de PAN Q'AYUDA" style="width:100%; max-height:420px; object-fit:contain; background:#fff; border-radius:16px; border:1px solid #ecdcc6"/>
+          <figcaption class="mini" style="margin-top:8px; color:var(--muted)">Imagen de producto: Gi-Health by PAN Q'AYUDA</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="pop">
+      <h2>¿Quiénes son?</h2>
+      <p class="lead"><strong>Cooperativa de pastelería gourmet en San Pablo, Querétaro</strong> con sentido social, integrada por personas con discapacidad, adultos mayores y madres jefas de familia.</p>
+    </section>
+
+    <!-- 5S como tarjetas sobrias con mini-tablas -->
+    <section class="pop" id="metodologia">
+      <h2>Metodología 5S aplicada</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <div class="t">
+            <h3>Clasificación</h3>
+            <div class="row"><strong>Actividades</strong>
+              <ul>
+                <li>Etiquetar utensilios</li>
+                <li>Eliminar ingredientes vencidos</li>
+                <li>Verificar caducidad en refrigeración</li>
+                <li>Actualizar recetas y eliminar versiones antiguas</li>
+              </ul>
+            </div>
+            <div class="row"><strong>Beneficios clave</strong>
+              <ul>
+                <li>Reducción de tiempos muertos</li>
+                <li>Flujo de trabajo ágil</li>
+                <li>Aceleración en la preparación de pedidos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card span-6">
+          <div class="t">
+            <h3>Orden</h3>
+            <div class="row"><strong>Actividades</strong>
+              <ul>
+                <li>Etiquetar estantes y recipientes</li>
+                <li>Asignar lugar a utensilios por uso</li>
+                <li>Etiquetas con fechas en envases</li>
+                <li>Delimitar zonas de máquinas</li>
+              </ul>
+            </div>
+            <div class="row"><strong>Beneficios clave</strong>
+              <ul>
+                <li>Menos tiempo buscando materiales</li>
+                <li>Flujo continuo de trabajo</li>
+                <li>Fácil adaptación de nuevos operarios</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card span-6">
+          <div class="t">
+            <h3>Limpieza</h3>
+            <div class="row"><strong>Actividades</strong>
+              <ul>
+                <li>Limpieza profunda del horno</li>
+                <li>Cronograma semanal de limpieza</li>
+                <li>Lista de chequeo por estación</li>
+              </ul>
+            </div>
+            <div class="row"><strong>Problemas detectados</strong>
+              <ul>
+                <li>Acumulación de harina</li>
+                <li>Restos de masa</li>
+                <li>Herramientas sucias</li>
+              </ul>
+            </div>
+            <div class="row"><strong>Beneficios clave</strong>
+              <ul>
+                <li>Mejor calidad del producto</li>
+                <li>Mayor vida útil de equipos</li>
+                <li>Menos paradas por contaminación</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card span-6">
+          <div class="t">
+            <h3>Estandarizar</h3>
+            <div class="row"><strong>Actividades</strong>
+              <ul>
+                <li>Manuales visuales e instructivos plastificados</li>
+                <li>Etiquetas por color</li>
+                <li>Roles definidos por turno</li>
+              </ul>
+            </div>
+            <div class="row"><strong>Beneficios clave</strong>
+              <ul>
+                <li>Menos errores humanos</li>
+                <li>Mejor coordinación</li>
+                <li>Rápida adaptación de nuevos trabajadores</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card span-6">
+          <div class="t">
+            <h3>Sostener</h3>
+            <div class="row"><strong>Actividades</strong>
+              <ul>
+                <li>Rutinas de revisión diarias</li>
+                <li>Reuniones breves semanales</li>
+                <li>Responsable por estación</li>
+                <li>Reconocimientos mensuales</li>
+              </ul>
+            </div>
+            <div class="row"><strong>Beneficios clave</strong>
+              <ul>
+                <li>Mejora continua</li>
+                <li>Procesos estables</li>
+                <li>Producción fluida y cultura ordenada</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Procesos: tablas comparativas en paralelo -->
+    <section class="pop" id="procesos">
+      <h2>Procesos: actual vs propuesto</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <div class="t">
+            <h3>Proceso actual</h3>
+            <div class="row"><strong>Tabla resumen</strong>
+              <img id="imgProcesoActual" alt="Tabla: Proceso actual (tiempos y problemas)" style="width:100%; border-radius:12px; border:1px solid #ecdcc6; background:#fff"/>
+            </div>
+          </div>
+        </div>
+        <div class="card span-6">
+          <div class="t">
+            <h3>Proceso propuesto</h3>
+            <div class="row"><strong>Tabla resumen</strong>
+              <img id="imgProcesoPropuesto" alt="Tabla: Proceso propuesto (objetivos y soluciones)" style="width:100%; border-radius:12px; border:1px solid #ecdcc6; background:#fff"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pop" id="flujo">
+      <h2>Flujo de producción propuesto</h2>
+      <div class="grid">
+        <figure class="card" style="text-align:center">
+          <img id="imgFlujo" alt="Diagrama: Flujo de producción propuesto" style="width:100%; max-height:520px; object-fit:contain; border-radius:12px; border:1px solid #ecdcc6; background:#fff"/>
+          <figcaption class="mini" style="margin-top:8px; color:var(--muted)">Diagrama de flujo con etapas secuenciales y paralelas.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Layouts en paralelo -->
+    <section class="pop" id="layouts">
+      <h2>Layouts: actual y propuesto</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <h3 style="margin-top:0">Layout actual</h3>
+          <div class="sketch" aria-label="Layout actual (imagen)">
+            <img id="imgLayoutActual" alt="Layout actual" style="width:100%; border-radius:12px; border:1px solid #ecdcc6; background:#fff"/>
+          </div>
+          <p class="mini" style="text-align:center; margin-top:8px">Distribución inicial del taller con cruces y esperas.</p>
+        </div>
+        <div class="card span-6">
+          <h3 style="margin-top:0">Layout propuesto</h3>
+          <div class="sketch" aria-label="Layout propuesto (imagen)">
+            <img id="imgLayoutPropuesto" alt="Layout propuesto" style="width:100%; border-radius:12px; border:1px solid #ecdcc6; background:#fff"/>
+          </div>
+          <p class="mini" style="text-align:center; margin-top:8px">Flujo lineal y continuo; menor distancia y tiempos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados esperados y KPIs -->
+    <section class="pop" id="resultados">
+      <h2>Resultados esperados</h2>
+      <div class="grid">
+        <figure class="card span-6" style="text-align:center">
+          <img id="imgResultados" alt="Gráfica de tiempo actual vs objetivo" style="width:100%; max-height:420px; object-fit:contain; border-radius:12px; border:1px solid #ecdcc6; background:#fff"/>
+          <figcaption class="mini" style="margin-top:8px; color:var(--muted)">Comparativa de tiempos por etapa: actual vs objetivo.</figcaption>
+        </figure>
+        <figure class="card span-6" style="text-align:center">
+          <img id="imgKpis" alt="Tabla de KPI's a medir" style="width:100%; max-height:420px; object-fit:contain; border-radius:12px; border:1px solid #ecdcc6; background:#fff"/>
+          <figcaption class="mini" style="margin-top:8px; color:var(--muted)">Indicadores y frecuencia de medición.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="rol" class="pop">
+      <h2>Mi rol</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <div class="t">
+            <h3>Responsabilidades</h3>
+            <div class="row">
+              <ul>
+                <li>Análisis de procesos y detección de cuellos de botella</li>
+                <li>Rediseño de <em>layout</em> orientado a flujo</li>
+                <li>Propuesta e implementación de prácticas 5S</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card span-6">
+          <div class="t">
+            <h3>Resultados esperados</h3>
+            <div class="row">
+              <ul>
+                <li>Reducción de tiempos y movimientos innecesarios</li>
+                <li>Flujo de producción más estable</li>
+                <li>Base estandarizada para crecimiento</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="mini">© <span id="year"></span> Agustín Del Prado Carrillo · Infografía del proyecto PAN Q'AYUDA</p>
+    </footer>
+  </div>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 👉 Enlace público al PDF (GitHub Pages)
+    const PDF_URL = '/pan-qayuda/assets/PAN_QAYUDA.pdf';
+
+    // 👉 Rutas de imágenes (ajusta '/pan-qayuda/' al nombre de tu repo)
+    const IMAGES = {
+      hero: '/pan-qayuda/assets/Gi-Health.png',
+      layoutActual: '/pan-qayuda/assets/layout_actual.png',
+      layoutPropuesto: '/pan-qayuda/assets/layout_propuesto.png',
+      procesoActual: '/pan-qayuda/assets/proceso_actual.png',
+      procesoPropuesto: '/pan-qayuda/assets/proceso_propuesto.png',
+      flujo: '/pan-qayuda/assets/flujo.png',
+      resultados: '/pan-qayuda/assets/resultados.png',
+      kpis: '/pan-qayuda/assets/kpis.png'
+    };
+
+    // PDF button
+    const pdfBtn = document.getElementById('pdfBtn');
+    if(PDF_URL){ pdfBtn.href = PDF_URL; }
+
+    // Imagen principal (hero)
+    const heroImg = document.getElementById('heroImg');
+    const heroPh = document.getElementById('heroPh');
+    const heroProject = document.getElementById('imgHeroProject');
+    function set(srcEl, url){ if(srcEl && url){ srcEl.src = url; } }
+    if(IMAGES.hero){ set(heroProject, IMAGES.hero); heroImg?.remove(); heroPh?.remove(); }
+
+    // Secciones con imágenes
+    set(document.getElementById('imgLayoutActual'), IMAGES.layoutActual);
+    set(document.getElementById('imgLayoutPropuesto'), IMAGES.layoutPropuesto);
+    set(document.getElementById('imgProcesoActual'), IMAGES.procesoActual);
+    set(document.getElementById('imgProcesoPropuesto'), IMAGES.procesoPropuesto);
+    set(document.getElementById('imgFlujo'), IMAGES.flujo);
+    set(document.getElementById('imgResultados'), IMAGES.resultados);
+    set(document.getElementById('imgKpis'), IMAGES.kpis);
+  </script>
+</body>
+</html>
